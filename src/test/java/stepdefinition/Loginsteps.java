@@ -25,7 +25,7 @@ public class Loginsteps {
     public void user_enters_credentials() {
         WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
-        driver.findElement(By.xpath("password")).sendKeys("admin123");
+        driver.findElement(By.id("password")).sendKeys("admin123");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
     }
 
