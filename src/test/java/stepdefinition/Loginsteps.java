@@ -38,6 +38,8 @@ public class Loginsteps {
     @When("user clicks on username")
     public void user_clicks_username() 
     {
+        WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='oxd-userdropdown-name']")));
         driver.findElement(By.xpath("//p[@class='oxd-userdropdown-name']")).click();
     }
 
